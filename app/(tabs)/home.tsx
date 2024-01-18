@@ -1,6 +1,6 @@
 import Profile from "../../components/home/profile";
-import { Stack } from "expo-router";
-import { SafeAreaView, ScrollView } from "react-native";
+import { Link, Stack } from "expo-router";
+import { SafeAreaView, ScrollView, Text } from "react-native";
 
 import {
   useFonts,
@@ -25,7 +25,9 @@ const Home = () => {
     <SafeAreaView className="bg-primaryBg h-screen">
       <ScrollView className="">
         <Stack.Screen options={{ title: "Home", headerShown: true }} />
-        <Profile />
+        <Link href={"/welcome"}>
+          <Text className="text-[#ffffff]">Logout Button</Text>
+        </Link>
       </ScrollView>
     </SafeAreaView>
   );
