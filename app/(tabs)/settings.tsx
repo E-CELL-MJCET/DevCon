@@ -1,10 +1,18 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { Text, View, Image } from "react-native";
 
-function settings() {
+function settings({ name, title, description, contributions, image }) {
   return (
     <View>
-      <Text>settings</Text>
+      <Text>{name}</Text>
+      <Text>{title}</Text>
+      <Text>{description}</Text>
+      <Text>{contributions}</Text>
+      <Image
+        source={{
+          uri: `$image`,
+        }}
+      ></Image>
     </View>
   );
 }
