@@ -1,6 +1,8 @@
 import Profile from "../../components/home/profile";
 import { Link, Stack } from "expo-router";
 import { SafeAreaView, ScrollView, Text } from "react-native";
+import SearchDev from "../searchDev";
+import React, { useState } from "react";
 
 import {
   useFonts,
@@ -17,12 +19,14 @@ const Home = () => {
     Nunito_600SemiBold,
     Nunito_700Bold,
   });
+  const [data, setData] = useState("");
 
   if (!fontsLoaded) {
     return null;
   }
   return (
     <SafeAreaView className="bg-primaryBg h-screen">
+      <SearchDev data="Hi" />
       <ScrollView className="">
         <Stack.Screen options={{ title: "Home", headerShown: true }} />
         <Link href={"/welcome"}>
