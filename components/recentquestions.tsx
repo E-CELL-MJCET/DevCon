@@ -1,16 +1,15 @@
 import React, { useState } from "react";
 import { TextInput, View, Text } from "react-native";
 
-const AskQues = () => {
+const Textarea = () => {
   const [text, setText] = useState("");
 
   return (
     <View>
       <Text className="text-3xl text-black m-2">Ask your Question</Text>
-      <View className="bg-[#ffffff] m-2 rounded">
+      <View className="bg-[#edf1ef] m-2 rounded">
         <TextInput
-          className=" h-40 text-lg p-2"
-          placeholder="Ask your question here ..."
+          className=" h-20 text-lg p-2"
           editable
           multiline
           numberOfLines={5}
@@ -23,4 +22,4 @@ const AskQues = () => {
   );
 };
 
-export default AskQues;
+export default Textarea;

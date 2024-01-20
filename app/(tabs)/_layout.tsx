@@ -1,4 +1,5 @@
 import { Tabs } from "expo-router";
+import { Icon } from "react-native-elements";
 
 const TabLayout = () => {
   return (
@@ -13,26 +14,41 @@ const TabLayout = () => {
         name="home"
         options={{
           title: "Home",
+          tabBarIcon: () => <Icon name="home" size={30} color="#900" />,
         }}
       />
-      {/* <Tabs.Screen
-        name="favourites"
+
+      <Tabs.Screen
+        name="news"
         options={{
-          title: "Settings",
+          title: "News",
+          tabBarIcon: () => (
+            <Icon
+              name="newspaper-o"
+              type="font-awesome"
+              size={30}
+              color="#300"
+            />
+          ),
+        }}
+      />
+
+      <Tabs.Screen
+        name="jobs"
+        options={{
+          title: "Jobs",
+          tabBarIcon: () => <Icon name="briefcase" type="font-awesome" />,
         }}
       />
       <Tabs.Screen
-        name="cart"
+        name="explore"
         options={{
-          title: "Cart",
+          title: "Explore",
+          tabBarIcon: () => (
+            <Icon name="compass" type="font-awesome" size={30} color="#900" />
+          ),
         }}
-      /> */}
-      {/* <Tabs.Screen
-				name="account"
-				options={{
-					title: 'Account',
-				}}
-			/> */}
+      />
     </Tabs>
   );
 };

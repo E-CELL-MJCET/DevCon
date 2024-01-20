@@ -1,6 +1,8 @@
 import Profile from "../../components/home/profile";
 import { Link, Stack } from "expo-router";
-import { SafeAreaView, ScrollView, Text } from "react-native";
+import { Pressable, SafeAreaView, ScrollView, Text } from "react-native";
+import SearchDev from "../searchDev";
+import React, { useState } from "react";
 
 import {
   useFonts,
@@ -9,6 +11,7 @@ import {
   Nunito_600SemiBold,
   Nunito_700Bold,
 } from "@expo-google-fonts/nunito";
+import AskQues from "../askQues";
 
 const Home = () => {
   const [fontsLoaded] = useFonts({
@@ -17,17 +20,20 @@ const Home = () => {
     Nunito_600SemiBold,
     Nunito_700Bold,
   });
+  const [data, setData] = useState("");
 
   if (!fontsLoaded) {
     return null;
   }
   return (
-    <SafeAreaView className="bg-primaryBg h-screen">
+    <SafeAreaView className="bg-[#DBDADE] h-screen">
       <ScrollView className="">
         <Stack.Screen options={{ title: "Home", headerShown: true }} />
-        <Link href={"/welcome"}>
-          <Text className="text-[#ffffff]">Logout Button</Text>
-        </Link>
+        <SearchDev />
+        <AskQues />
+        <Pressable className="bg-[#eb74dd] h-14 w-15 p-4 mx-12 my-4 rounded">
+          <Text className="text-[#fffF] text-center">Submit</Text>
+        </Pressable>
       </ScrollView>
     </SafeAreaView>
   );

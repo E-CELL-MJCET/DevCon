@@ -11,7 +11,7 @@ const Jobs = () => {
 
   return (
     <SafeAreaView className="bg-[#f4f4f4]">
-      <Stack.Screen options={{ title: "Home", headerShown: false }} />
+      <Stack.Screen options={{ title: "Jobs", headerShown: false }} />
 
       <ScrollView showsVerticalScrollIndicator={false}>
         <View className="p-3">
