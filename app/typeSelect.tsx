@@ -4,7 +4,7 @@ import { View } from "react-native";
 
 const TypeSelect = () => {
   return (
-    <View>
+    <View className="">
       <Card
         title="Developer"
         description="As a developer you can explore the trending tech stack"

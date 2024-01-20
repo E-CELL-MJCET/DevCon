@@ -5,9 +5,15 @@ import { Link, Stack, router } from "expo-router";
 const Card = ({ title, description, direction }) => {
   const goNext = () => {
     if (direction == 1) {
+<<<<<<< HEAD
       router.replace("/settings");
     } else {
       router.replace("/home");
+=======
+      router.replace("/home");
+    } else {
+      router.replace("/recuriter");
+>>>>>>> 6bf89b37cfe50fcbeb3c13d824012a568be3dd72
     }
   };
   return (
