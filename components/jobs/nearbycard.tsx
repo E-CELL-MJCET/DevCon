@@ -3,6 +3,7 @@ import { View, Text, TouchableOpacity, Image, Pressable } from "react-native";
 import { checkImageURL } from "../../utils/checkImageUrl";
 
 const NearbyJobCard = ({ job, handleNavigate }) => {
+  const locationIcon = require("../../assets/location.png");
   return (
     <Pressable
       className="flex justify-between items-center flex-row p-4 rounded-2xl bg-[#ffffff] my-1 mx-3 "
@@ -25,9 +26,16 @@ const NearbyJobCard = ({ job, handleNavigate }) => {
           {job?.job_title}
         </Text>
 
-        <Text className="text-small text-[#83829A] mt-1 capitalize">
-          {job?.job_employment_type}
-        </Text>
+        <View className="flex flex-row">
+          <Image
+            source={locationIcon}
+            resizeMode="contain"
+            className="w-[14px] h-[14px] mt-1"
+          />
+          <Text className="text-small text-[#83829A] mt-1 capitalize">
+            {job?.job_city}
+          </Text>
+        </View>
       </View>
     </Pressable>
   );

@@ -13,7 +13,7 @@ import useFetch from "../../hook/useFetch";
 const Popularjobs = () => {
   const router = useRouter();
   const { data, isLoading, error } = useFetch("search", {
-    query: "React developer",
+    query: "React",
     num_pages: "1",
   });
 
@@ -28,9 +28,6 @@ const Popularjobs = () => {
     <View className="mt-1">
       <View className="flex-row justify-between items-center">
         <Text className="text-lg font-medium text-[#312651]">Popular jobs</Text>
-        <TouchableOpacity>
-          <Text className="font-medium text-[#83829A]">Show all</Text>
-        </TouchableOpacity>
       </View>
 
       <View className="mt-1">
