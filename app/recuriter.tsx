@@ -1,11 +1,13 @@
+import { Stack } from "expo-router";
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, SafeAreaView } from "react-native";
 
 const Recuriter = () => {
   return (
-    <View>
+    <SafeAreaView>
+      <Stack.Screen options={{ title: "Recruiter", headerShown: false }} />
       <Text>Recuriter</Text>
-    </View>
+    </SafeAreaView>
   );
 };
 

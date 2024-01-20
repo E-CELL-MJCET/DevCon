@@ -5,9 +5,9 @@ import { Link, Stack, router } from "expo-router";
 const Card = ({ title, description, direction }) => {
   const goNext = () => {
     if (direction == 1) {
-      router.replace("/settings");
-    } else {
       router.replace("/home");
+    } else {
+      router.replace("/recuriter");
     }
   };
   return (

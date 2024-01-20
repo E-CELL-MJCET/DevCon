@@ -32,7 +32,7 @@ const Home = () => {
         <SearchDev />
         <AskQues />
         <Pressable className="bg-[#eb74dd] h-14 w-15 p-4 mx-12 my-4 rounded">
-          <Text className="text-[#fffF] text-center">Logout Button</Text>
+          <Text className="text-[#fffF] text-center">Submit</Text>
         </Pressable>
       </ScrollView>
     </SafeAreaView>
