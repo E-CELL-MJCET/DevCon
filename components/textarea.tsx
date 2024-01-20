@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { TextInput, View, Text } from "react-native";
 
-const AskQues = () => {
+const Textarea = () => {
   const [text, setText] = useState("");
 
   return (
@@ -22,4 +22,4 @@ const AskQues = () => {
   );
 };
 
-export default AskQues;
+export default Textarea;
