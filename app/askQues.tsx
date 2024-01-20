@@ -7,9 +7,10 @@ const AskQues = () => {
   return (
     <View>
       <Text className="text-3xl text-black m-2">Ask your Question</Text>
-      <View className="bg-[#edf1ef] m-2 rounded">
+      <View className="bg-[#ffffff] m-2 rounded">
         <TextInput
-          className=" h-20 text-lg p-2"
+          className=" h-40 text-lg p-2"
+          placeholder="Ask your question here ..."
           editable
           multiline
           numberOfLines={5}
