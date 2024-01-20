@@ -7,7 +7,7 @@ import * as QueryParams from "expo-auth-session/build/QueryParams";
 import * as WebBrowser from "expo-web-browser";
 
 const goNext = () => {
-  router.replace("/home");
+  router.replace("/typeSelect");
 };
 
 async function signInWithGithub() {

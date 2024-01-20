@@ -15,19 +15,19 @@ const TabLayout = () => {
           title: "Home",
         }}
       />
-      {/* <Tabs.Screen
-        name="favourites"
+      <Tabs.Screen
+        name="settings"
         options={{
           title: "Settings",
         }}
       />
-      <Tabs.Screen
+      {/*<Tabs.Screen
         name="cart"
         options={{
           title: "Cart",
         }}
-      /> */}
-      {/* <Tabs.Screen
+      /> 
+       <Tabs.Screen
 				name="account"
 				options={{
 					title: 'Account',
