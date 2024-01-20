@@ -1,6 +1,6 @@
 import Profile from "../../components/home/profile";
 import { Link, Stack } from "expo-router";
-import { SafeAreaView, ScrollView, Text, TextInput } from "react-native";
+import { Pressable, SafeAreaView, ScrollView, Text } from "react-native";
 import SearchDev from "../searchDev";
 import React, { useState } from "react";
 
@@ -26,14 +26,14 @@ const Home = () => {
     return null;
   }
   return (
-    <SafeAreaView className="bg-[#ffff] h-screen">
+    <SafeAreaView className="bg-[#DBDADE] h-screen">
       <ScrollView className="">
         <Stack.Screen options={{ title: "Home", headerShown: true }} />
         <SearchDev />
         <AskQues />
-        <Link href={"/welcome"}>
-          <Text className="text-[#a73a3a]">Logout Button</Text>
-        </Link>
+        <Pressable className="bg-[#eb74dd] h-14 w-15 p-4 mx-12 my-4 rounded">
+          <Text className="text-[#fffF] text-center">Logout Button</Text>
+        </Pressable>
       </ScrollView>
     </SafeAreaView>
   );
