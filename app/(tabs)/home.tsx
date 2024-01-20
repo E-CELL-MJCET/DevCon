@@ -22,7 +22,7 @@ const Home = () => {
     return null;
   }
   return (
-    <SafeAreaView className="bg-primaryBg h-screen">
+    <SafeAreaView className="bg-[#110928] h-screen">
       <ScrollView className="">
         <Stack.Screen options={{ title: "Home", headerShown: true }} />
         <Link href={"/welcome"}>
