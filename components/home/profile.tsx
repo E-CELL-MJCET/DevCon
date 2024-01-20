@@ -18,12 +18,7 @@ const Profile = () => {
       </View>
       <View className="h-44 w-full rounded-xl bg-[#2c2341] px-6 py-4 flex flex-col gap-y-3">
         <View className="flex flex-row items-center justify-start gap-x-3">
-          <View className="h-20 w-20 rounded-full bg-white">
-            {/* <Image
-              className="h-20 w-20 "
-              source=''
-            /> */}
-          </View>
+          <View className="h-20 w-20 rounded-full bg-white"></View>
           <Text
             className="text-xl text-[#fff] "
             style={{ fontFamily: "Nunito_600SemiBold" }}

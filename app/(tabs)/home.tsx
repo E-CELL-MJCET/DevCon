@@ -1,6 +1,11 @@
-import Profile from "../../components/home/profile";
-import { Link, Stack } from "expo-router";
+// import Profile from "../../components/home/profile";
+import { Link } from "expo-router";
 import { SafeAreaView, ScrollView, Text } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import Login from "../screens/Login";
+import { initializeAuth } from "firebase/auth";
+import ReactNativeAsyncStorage from "@react-native-async-storage/async-storage";
 
 import {
   useFonts,
@@ -10,6 +15,7 @@ import {
   Nunito_700Bold,
 } from "@expo-google-fonts/nunito";
 
+const Stack = createNativeStackNavigator();
 const Home = () => {
   const [fontsLoaded] = useFonts({
     Nunito_400Regular,
@@ -22,14 +28,15 @@ const Home = () => {
     return null;
   }
   return (
-    <SafeAreaView className="bg-[#110928] h-screen">
-      <ScrollView className="">
-        <Stack.Screen options={{ title: "Home", headerShown: true }} />
-        <Link href={"/welcome"}>
-          <Text className="text-[#ffffff]">Logout Button</Text>
-        </Link>
-      </ScrollView>
-    </SafeAreaView>
+    <NavigationContainer independent={true}>
+      <Stack.Navigator initialRouteName="Login">
+        <Stack.Screen
+          name="Login"
+          component={Login}
+          options={{ headerShown: false }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 
