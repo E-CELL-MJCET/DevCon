@@ -11,14 +11,16 @@ const Card = ({ title, description, direction }) => {
     }
   };
   return (
-    <View className="border rounded p-4 shadow-lg flex space-y-4 m-4 bg-[#F9EFDB]">
-      <Text className="flex text-center text-lg font-semibold">{title}</Text>
-      <Text className="">{description}</Text>
+    <View className="flex justify-between items-center p-4 rounded-2xl bg-[#ffffff] my-5 mx-3 space-y-4">
+      <Text className="flex text-center text-lg font-semibold text-[#312651]">
+        {title}
+      </Text>
+      <Text className="text-[#312651]">{description}</Text>
       <Pressable
-        className="bg-[#DC84F3] p-4 mx-2 rounded-full"
+        className="p-4 mx-2 rounded-full bg-[#191f91] w-full"
         onPress={goNext}
       >
-        <Text className="text-center">Next</Text>
+        <Text className="text-center text-[#ffffff]">Next</Text>
       </Pressable>
     </View>
   );
