@@ -42,6 +42,14 @@ const Card = ({ title, description, direction }) => {
   };
 
   const SelectRecruiter = () => {
+    async function getData() {
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
+
+      setUserID(user.id);
+    }
+    getData();
     const updateRecruit = async () => {
       const { error } = await supabase
         .from("users")
