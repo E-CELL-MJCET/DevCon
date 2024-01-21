@@ -142,27 +142,29 @@ const Welcome = () => {
               placeholder="Password"
               value={password}
             ></TextInput>
+            <View className="flex flex-col space-y-2">
+              <Pressable
+                className="border bg-primaryBg w-84 py-4 rounded-3xl items-center"
+                onPress={signUpWithEmail}
+              >
+                <Text className="text-[#ffffff]">Sign up</Text>
+              </Pressable>
+            </View>
             <Pressable
-              className="border bg-primaryBg w-full py-4 rounded-3xl items-center"
-              onPress={signUpWithEmail}
+              className="border bg-primaryBg w-84 py-4 rounded-3xl items-center mt-3"
+              onPress={signIn}
             >
-              <Text className="text-[#ffffff]">Sign up</Text>
+              <Text className="text-[#ffffff]">Sign in</Text>
+            </Pressable>
+            <Pressable
+              className="border bg-primaryBg w-84 py-4 rounded-3xl items-center "
+              onPress={() => {
+                router.replace("/typeSelect");
+              }}
+            >
+              <Text className="text-[#ffffff]">Direct home</Text>
             </Pressable>
           </View>
-          <Pressable
-            className="border bg-primaryBg w-80 py-4 rounded-3xl items-center mt-3"
-            onPress={signIn}
-          >
-            <Text className="text-[#ffffff]">Sign in</Text>
-          </Pressable>
-          <Pressable
-            className="border bg-primaryBg w-full py-5 rounded-3xl items-center mt-3"
-            onPress={() => {
-              router.replace("/typeSelect");
-            }}
-          >
-            <Text className="text-[#ffffff]">Direct home</Text>
-          </Pressable>
         </View>
       </View>
     </SafeAreaView>

@@ -39,6 +39,7 @@ const Card = ({ title, description, direction }) => {
     };
 
     updateDev();
+    router.replace("/home");
   };
 
   const SelectRecruiter = () => {
@@ -66,6 +67,7 @@ const Card = ({ title, description, direction }) => {
     };
 
     updateRecruit();
+    router.replace("/recuriter");
   };
   return (
     <View className="flex justify-between items-center p-4 rounded-2xl bg-[#ffffff] my-5 mx-3 space-y-4">

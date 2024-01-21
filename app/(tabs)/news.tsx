@@ -1,5 +1,5 @@
 import React from "react";
-import { View } from "react-native";
+import { ScrollView, View } from "react-native";
 import { Text } from "react-native-elements";
 import NewsDetails from "../newsDetails";
 
@@ -57,11 +57,13 @@ const data = [
 ];
 function News() {
   return (
-    <View>
-      {data.map((item, i) => (
-        <NewsDetails key={i} heading={item.heading} content={item.content} />
-      ))}
-    </View>
+    <ScrollView>
+      <View>
+        {data.map((item, i) => (
+          <NewsDetails key={i} heading={item.heading} content={item.content} />
+        ))}
+      </View>
+    </ScrollView>
   );
 }
 
