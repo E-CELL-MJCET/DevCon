@@ -114,11 +114,16 @@ const Welcome = () => {
         Keyboard.dismiss();
       }}
     >
-      <SafeAreaView>
+      <SafeAreaView className="bg-[#120126]">
         <Stack.Screen options={{ headerShown: false }}></Stack.Screen>
         <View className="flex flex-col items-center mt-52  space-y-6  h-full w-full">
           <View>
-            <Text className="text-2xl font-extrabold">Welcome to DevCon</Text>
+            <Text
+              className="text-2xl font-semibold text-white"
+              style={{ fontFamily: "Nunito_600SemiBold" }}
+            >
+              Welcome to DevCon
+            </Text>
           </View>
 
           <View className="w-full px-[20px] flex space-y-2">
@@ -132,30 +137,33 @@ const Welcome = () => {
             <View className="w-full px-3 flex space-y-5">
               <TextInput
                 onChangeText={setUsername}
-                className="w-full px-3 h-16 border my-1 rounded"
+                className="w-full px-3 h-16 border my-1 rounded text-white placeholder:text-white border-gray-200"
                 placeholder="Username"
                 value={username}
+                placeholderTextColor="white"
               ></TextInput>
               <TextInput
                 onChangeText={setEmail}
-                className="w-full px-3 h-16 border my-1 rounded"
+                className="w-full px-3 h-16 border my-1 rounded text-white placeholder:text-white border-gray-200 "
                 placeholder="Email"
                 value={email}
+                placeholderTextColor="white"
               ></TextInput>
 
               <TextInput
                 onChangeText={setPassword}
-                className="w-full px-3 h-16 border my-1 rounded"
+                className="w-full px-3 h-16 border my-1 rounded  text-white placeholder:text-white border-gray-200"
                 placeholder="Password"
                 value={password}
                 secureTextEntry
+                placeholderTextColor="white"
               ></TextInput>
               <View className="flex flex-col space-y-2">
                 <Pressable
-                  className="border bg-primaryBg w-84 py-4 rounded-3xl items-center"
+                  className="border bg-violet-400 w-84 py-4 rounded-3xl items-center"
                   onPress={signUpWithEmail}
                 >
-                  <Text className="text-[#ffffff]">Sign up</Text>
+                  <Text className="text-[#000]">Sign up</Text>
                 </Pressable>
               </View>
               <Pressable
