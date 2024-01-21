@@ -6,18 +6,20 @@ import { supabase } from "../utils/supabase";
 
 const TypeSelect = () => {
   return (
-    <SafeAreaView className="bg-[#f4f4f4]">
+    <SafeAreaView className="bg-[#120126] h-screen flex flex-col ">
       <Stack.Screen options={{ title: "Select Type", headerShown: true }} />
-      <Card
-        title="Developer"
-        description="As a developer you can explore the trending tech stack"
-        direction={1}
-      ></Card>
-      <Card
-        title="Recuriter"
-        description="As a Recuriter you can explore the required developer for your tech stack"
-        direction={2}
-      ></Card>
+      <View className="top-[17%]">
+        <Card
+          title="Developer"
+          description="As a developer you can explore the trending tech stack"
+          direction={1}
+        ></Card>
+        <Card
+          title="Recuriter"
+          description="As a Recuriter you can explore the required developer for your tech stack"
+          direction={2}
+        ></Card>
+      </View>
     </SafeAreaView>
   );
 };

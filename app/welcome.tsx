@@ -167,18 +167,18 @@ const Welcome = () => {
                 </Pressable>
               </View>
               <Pressable
-                className="border bg-primaryBg w-84 py-4 rounded-3xl items-center mt-3"
+                className="border bg-violet-400 w-84 py-4 rounded-3xl items-center mt-3"
                 onPress={signIn}
               >
-                <Text className="text-[#ffffff]">Sign in</Text>
+                <Text className="text-[#000]">Sign in</Text>
               </Pressable>
               <Pressable
-                className="border bg-primaryBg w-84 py-4 rounded-3xl items-center "
+                className="border bg-violet-400 w-84 py-4 rounded-3xl items-center "
                 onPress={() => {
                   router.replace("/typeSelect");
                 }}
               >
-                <Text className="text-[#ffffff]">Direct home</Text>
+                <Text className="text-[#000]">Direct home</Text>
               </Pressable>
             </View>
           </View>
