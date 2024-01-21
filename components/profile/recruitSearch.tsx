@@ -12,7 +12,7 @@ import { useRouter } from "expo-router";
 import { Nunito_400Regular } from "@expo-google-fonts/nunito";
 const jobTypes = ["Full-time", "Part-time", "Contractor"];
 
-const Search = ({ searchTerm, setSearchTerm, handleClick }) => {
+const RecruitSearch = ({ searchTerm, setSearchTerm, handleClick }) => {
   const router = useRouter();
   const [activeJobType, setActiveJobType] = useState("Full-time");
 
@@ -31,7 +31,7 @@ const Search = ({ searchTerm, setSearchTerm, handleClick }) => {
           className="font-bold text-[24px] text-white my-2"
           style={{ fontFamily: "Nunito_700Bold" }}
         >
-          Find your perfect job
+          Find your perfect candidate
         </Text>
       </View>
 
@@ -92,4 +92,4 @@ const Search = ({ searchTerm, setSearchTerm, handleClick }) => {
   );
 };
 
-export default Search;
+export default RecruitSearch;

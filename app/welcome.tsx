@@ -17,7 +17,7 @@ import Search from "@components/jobs/search";
 import TypeSelect from "./typeSelect";
 
 const goNext = () => {
-  router.replace("/stackSelector");
+  router.replace("/typeSelect");
 };
 
 async function signInWithGithub() {
