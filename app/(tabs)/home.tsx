@@ -26,9 +26,15 @@ const Home = () => {
     return null;
   }
   return (
-    <SafeAreaView className="bg-[#120126] h-screen">
+    <SafeAreaView className="bg-[#120126] pt-5 h-screen">
       <ScrollView className="">
         <Stack.Screen options={{ title: "Home", headerShown: true }} />
+        <Text
+          className="text-white pb-5 px-2 text-lg"
+          style={{ fontFamily: "Nunito_700Bold" }}
+        >
+          Hi, Name
+        </Text>
         <SearchDev />
         <AskQues />
         <Pressable className="bg-violet-300 text-black text-lg h-14 w-15 p-4 w-fit mx-12 my-4 rounded-lg">

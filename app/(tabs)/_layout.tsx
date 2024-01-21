@@ -6,15 +6,17 @@ const TabLayout = () => {
     <Tabs
       screenOptions={{
         headerStyle: {
-          backgroundColor: "#f472b6",
+          backgroundColor: "#8a48f0",
+        },
+        tabBarStyle: {
+          backgroundColor: "#8a48f0",
         },
       }}
     >
       <Tabs.Screen
         name="home"
         options={{
-          title: "Home",
-          tabBarIcon: () => <Icon name="home" size={30} color="#900" />,
+          tabBarIcon: () => <Icon name="home" size={30} color="#fff" />,
         }}
       />
 
@@ -27,7 +29,7 @@ const TabLayout = () => {
               name="newspaper-o"
               type="font-awesome"
               size={30}
-              color="#300"
+              color="#fff"
             />
           ),
         }}
@@ -37,7 +39,9 @@ const TabLayout = () => {
         name="jobs"
         options={{
           title: "Jobs",
-          tabBarIcon: () => <Icon name="briefcase" type="font-awesome" />,
+          tabBarIcon: () => (
+            <Icon name="briefcase" type="font-awesome" color="#fff" />
+          ),
         }}
       />
       <Tabs.Screen
@@ -45,7 +49,7 @@ const TabLayout = () => {
         options={{
           title: "Explore",
           tabBarIcon: () => (
-            <Icon name="compass" type="font-awesome" size={30} color="#900" />
+            <Icon name="compass" type="font-awesome" size={30} color="#fff" />
           ),
         }}
       />

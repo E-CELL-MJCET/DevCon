@@ -36,7 +36,7 @@ const Search = ({ searchTerm, setSearchTerm, handleClick }) => {
       </View>
 
       <View className="flex-row justify-center items-center mt-1 h-[50px]">
-        <View className="flex-1 h-full w-full rounded-l-xl bg-violet-200 text-black rounded-medium placeholder:text-white items-center justify-center">
+        <View className="flex-1 h-full w-full rounded-l-md bg-violet-200 text-white  placeholder:text-white items-center justify-center">
           <TextInput
             className="font-regular w-full h-5 pl-4 placeholder:text-black"
             style={{ fontFamily: "Nunito_600SemiBold" }}
@@ -47,7 +47,7 @@ const Search = ({ searchTerm, setSearchTerm, handleClick }) => {
         </View>
 
         <Pressable
-          className="w-12 h-full bg-violet-600 rounded-r-2xl flex items-center justify-center"
+          className="w-12 h-full bg-violet-600 rounded-r-md flex items-center justify-center"
           onPress={handleClick}
         >
           <Image
