@@ -11,10 +11,6 @@ module.exports = {
   ],
   theme: {
     extend: {},
-    colors: {
-      primaryBg: "#211440",
-      primaryText: "black",
-    },
   },
   plugins: [],
 };

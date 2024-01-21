@@ -14,23 +14,30 @@ const Nearbyjobs = () => {
   return (
     <View className="mt-1">
       <View className="flex-row justify-between items-center mt-2">
-        <Text className="text-lg font-medium text-[#312651]">Nearby jobs</Text>
+        <Text
+          className="text-lg font-medium text-white "
+          style={{ fontFamily: "Nunito_600SemiBold" }}
+        >
+          Nearby jobs
+        </Text>
       </View>
 
-      <View className="mt-1 ">
-        {isLoading ? (
-          <ActivityIndicator size="large" color="#312651" />
-        ) : error ? (
-          <Text>Something went wrong</Text>
-        ) : (
-          data?.map((job) => (
-            <NearbyJobCard
-              job={job}
-              key={`nearby-job-${job.job_id}`}
-              handleNavigate={() => router.push(`/job-details/${job.job_id}`)}
-            />
-          ))
-        )}
+      <View className="flex flex-col items-center">
+        <View className="mt-1 w-screen px-2">
+          {isLoading ? (
+            <ActivityIndicator size="large" color="#312651" />
+          ) : error ? (
+            <Text>Something went wrong</Text>
+          ) : (
+            data?.map((job) => (
+              <NearbyJobCard
+                job={job}
+                key={`nearby-job-${job.job_id}`}
+                handleNavigate={() => router.push(`/job-details/${job.job_id}`)}
+              />
+            ))
+          )}
+        </View>
       </View>
     </View>
   );

@@ -27,7 +27,12 @@ const Popularjobs = () => {
   return (
     <View className="mt-1">
       <View className="flex-row justify-between items-center">
-        <Text className="text-lg font-medium text-[#312651]">Popular jobs</Text>
+        <Text
+          className="text-lg font-semibold text-white"
+          style={{ fontFamily: "Nunito_600SemiBold" }}
+        >
+          Popular jobs
+        </Text>
       </View>
 
       <View className="mt-1">

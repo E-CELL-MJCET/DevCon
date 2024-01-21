@@ -6,7 +6,12 @@ const AskQues = () => {
 
   return (
     <View>
-      <Text className="text-3xl text-black m-2">Ask your Question</Text>
+      <Text
+        className="text-3xl text-white m-2"
+        style={{ fontFamily: "Nunito_600SemiBold" }}
+      >
+        Ask your Question
+      </Text>
       <View className="bg-[#ffffff] m-2 rounded">
         <TextInput
           className=" h-40 text-lg p-2"

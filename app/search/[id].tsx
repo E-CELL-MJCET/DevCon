@@ -68,7 +68,7 @@ const JobSearch = () => {
   }, []);
 
   return (
-    <SafeAreaView className="bg-[#f4f4f4]">
+    <SafeAreaView className="bg-[#120126]">
       <Stack.Screen
         options={{
           headerShown: true,
@@ -91,10 +91,16 @@ const JobSearch = () => {
         ListHeaderComponent={() => (
           <>
             <View className="w-full">
-              <Text className="font-bold text-[24px] text-[#312651]">
+              <Text
+                className="font-bold text-[24px] text-white"
+                style={{ fontFamily: "Nunito_700Bold" }}
+              >
                 {params.id}
               </Text>
-              <Text className="mt-2 font-medium text-[12px] text-[#312651]">
+              <Text
+                className="mt-2 font-semibold text-[12px] text-zinc-200"
+                style={{ fontFamily: "Nunito_600SemiBold" }}
+              >
                 Job Opportunities
               </Text>
             </View>
@@ -119,11 +125,11 @@ const JobSearch = () => {
                 resizeMode="contain"
               />
             </Pressable>
-            <View className="w-[30px] h-[30px] rounded-[5px] justify-center items-center bg-[#312651]">
-              <Text className="text-[#ffffff] font-bold">{page}</Text>
+            <View className="w-[30px] h-[30px] rounded-[5px] justify-center items-center bg-violet-300">
+              <Text className="text-[#000] font-bold">{page}</Text>
             </View>
             <Pressable
-              className="w-[30px] h-[30px] rounded-[5px] justify-center items-center bg-[#ffffff]"
+              className="w-[30px] h-[30px] rounded-[5px] justify-center items-center bg-[#ffffff] "
               onPress={() => handlePagination("right")}
             >
               <Image
