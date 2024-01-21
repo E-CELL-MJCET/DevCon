@@ -19,22 +19,22 @@ const Company = ({ companyLogo, jobTitle, companyName, location, city }) => {
       </View>
 
       <View className="mt-[8px]">
-        <Text className="text-[16px] text-[#312651] font-bold text-center">
+        <Text className="text-[16px] text-[#ffffff] font-bold text-center">
           {jobTitle}
         </Text>
       </View>
 
       <View className="mt-[4px] items-center justify-center flex-row">
-        <Text className="text-[12px] text-[#312651] font-medium">
+        <Text className="text-[12px] text-[#ffffff] font-medium">
           {companyName} /{" "}
         </Text>
         <View className="flex-row flex items-center justify-center">
           <Image
             source={locationIcon}
             resizeMode="contain"
-            className="w-[14px] h-[14px]"
+            className="w-[14px] h-[14px] "
           />
-          <Text className="text-[12px] ml-[2px] text-[#83829A]">
+          <Text className="text-[12px] ml-[2px] text-[#ffffff]">
             {location}
           </Text>
           <Text className="text-[12px] ml-[2px] text-[#83829A]">- {city}</Text>

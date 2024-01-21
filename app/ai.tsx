@@ -30,7 +30,8 @@ const AI = () => {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            Authorization: "Bearer ", // Replace with your OpenAI API key
+            Authorization:
+              "Bearer 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",
           },
           body: JSON.stringify(jsonBody),
         }
