@@ -7,12 +7,12 @@ const AskQues = () => {
   return (
     <View>
       <Text
-        className="text-3xl text-white m-2"
+        className="text-3xl text-white mt-5 mx-5"
         style={{ fontFamily: "Nunito_600SemiBold" }}
       >
         Ask your Question
       </Text>
-      <View className="bg-[#ffffff] m-2 rounded">
+      <View className="bg-violet-200 mx-5 mt-2  rounded-lg">
         <TextInput
           className=" h-40 text-lg p-2"
           placeholder="Ask your question here ..."

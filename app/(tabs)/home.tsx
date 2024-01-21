@@ -1,6 +1,6 @@
 import Profile from "../../components/home/profile";
 import { Link, Stack, router } from "expo-router";
-import { Pressable, SafeAreaView, ScrollView, Text } from "react-native";
+import { Pressable, SafeAreaView, ScrollView, View, Text } from "react-native";
 import SearchDev from "../searchDev";
 import React, { useState } from "react";
 
@@ -13,6 +13,7 @@ import {
 } from "@expo-google-fonts/nunito";
 import AskQues from "../askQues";
 import { supabase } from "../../utils/supabase";
+import { Icon } from "react-native-elements";
 
 const Home = () => {
   const [name, setName] = useState("");
@@ -67,22 +68,32 @@ const Home = () => {
         >
           Hi, {name}
         </Text>
-        <Pressable
-          className="bg-violet-300 text-black text-lg h-14 w-15 p-4 w-fit mx-12 my-4 rounded-lg"
-          onPress={goAI}
-        >
-          <Text
-            className="text-black text-lg font-bold text-center"
-            style={{ fontFamily: "Nunito_700Bold" }}
+        <View className="flex flex-row items-center justify-between mr-5">
+          <Pressable
+            className="bg-violet-300 text-black text-lg ml-5  w-fit px-6 py-2 my-4 rounded-lg"
+            onPress={goAI}
           >
-            Ask AI
-          </Text>
-        </Pressable>
+            <Text
+              className="text-black text-lg font-bold text-center"
+              style={{ fontFamily: "Nunito_700Bold" }}
+            >
+              Ask AI
+            </Text>
+          </Pressable>
+          <Pressable
+            className="bg-violet-300 rounded-xl px-6 py-2 flex items-center justify-center"
+            onPress={() => {
+              router.push("/settings");
+            }}
+          >
+            <Icon name="settings" size={30} color="#100" />
+          </Pressable>
+        </View>
         <SearchDev />
         <AskQues />
-        <Pressable className="bg-violet-300 text-black text-lg h-14 w-15 p-4 w-fit mx-12 my-4 rounded-lg">
+        <Pressable className="bg-violet-600 text-black text-lg  p-4 w-fit mx-12 my-7 rounded-lg">
           <Text
-            className="text-black text-lg font-bold text-center"
+            className="text-white text-lg font-bold text-center"
             style={{ fontFamily: "Nunito_700Bold" }}
           >
             Submit
