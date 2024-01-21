@@ -44,6 +44,15 @@ function settings({ name, title, description, contributions }) {
         >
           <Text>Submit</Text>
         </Pressable>
+
+        <Pressable
+          className=""
+          onPress={() => {
+            router.replace("/ai");
+          }}
+        >
+          <Text>AI</Text>
+        </Pressable>
       </SafeAreaView>
     </View>
   );

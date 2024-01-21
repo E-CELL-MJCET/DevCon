@@ -123,7 +123,7 @@ const Welcome = () => {
             <TextInput
               onChangeText={setUsername}
               className="w-full px-3 h-10 border my-5"
-              placeholder="Email"
+              placeholder="Username"
               value={username}
             ></TextInput>
             <TextInput
