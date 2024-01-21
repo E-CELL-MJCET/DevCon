@@ -10,13 +10,42 @@ import {
 } from "react-native";
 import { useRouter } from "expo-router";
 import { Nunito_400Regular } from "@expo-google-fonts/nunito";
+import { supabase } from "../../utils/supabase";
 const jobTypes = ["Full-time", "Part-time", "Contractor"];
 
 const Search = ({ searchTerm, setSearchTerm, handleClick }) => {
   const router = useRouter();
   const [activeJobType, setActiveJobType] = useState("Full-time");
+  const [name, setName] = useState("");
+  const [userid, setUserID] = useState("");
 
   const search = require("../../assets/search.png");
+
+  async function getData() {
+    const {
+      data: { user },
+    } = await supabase.auth.getUser();
+
+    setUserID(user.id);
+  }
+  getData();
+
+  async function getName() {
+    const { data, error } = await supabase
+      .from("users")
+      .select("name")
+      .eq("uid", userid);
+
+    const jsonString = JSON.stringify(data);
+    const regexResult = /"name":"([^"]+)"/.exec(jsonString);
+    const extractedName = regexResult ? regexResult[1] : null;
+
+    if (extractedName) {
+      setName(extractedName);
+    }
+  }
+
+  getName();
 
   return (
     <View className="w-full mt-6 px-3">
@@ -25,7 +54,7 @@ const Search = ({ searchTerm, setSearchTerm, handleClick }) => {
           className="font-medium text-[20px] text-gray-100 mt-6 "
           style={{ fontFamily: "Nunito_400Regular" }}
         >
-          Hello Abid
+          Hello {name}
         </Text>
         <Text
           className="font-bold text-[24px] text-white my-2"
@@ -36,7 +65,7 @@ const Search = ({ searchTerm, setSearchTerm, handleClick }) => {
       </View>
 
       <View className="flex-row justify-center items-center mt-1 h-[50px]">
-        <View className="flex-1 h-full w-full rounded-l-xl bg-violet-200 text-black rounded-medium placeholder:text-white items-center justify-center">
+        <View className="flex-1 h-full w-full rounded-l-md bg-violet-200 text-white  placeholder:text-white items-center justify-center">
           <TextInput
             className="font-regular w-full h-5 pl-4 placeholder:text-black"
             style={{ fontFamily: "Nunito_600SemiBold" }}
@@ -47,7 +76,7 @@ const Search = ({ searchTerm, setSearchTerm, handleClick }) => {
         </View>
 
         <Pressable
-          className="w-12 h-full bg-violet-600 rounded-r-2xl flex items-center justify-center"
+          className="w-12 h-full bg-violet-600 rounded-r-md flex items-center justify-center"
           onPress={handleClick}
         >
           <Image

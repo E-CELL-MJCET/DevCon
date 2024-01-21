@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { View, Text, Pressable, Image } from "react-native";
 import { Link, Stack, router } from "expo-router";
 import { supabase } from "../utils/supabase";
@@ -7,11 +7,19 @@ const Card = ({ title, description, direction }) => {
   const [userid, setUserID] = useState("");
   const goNext = () => {
     if (direction == 1) {
+      router.replace("/home");
+    } else {
+      router.replace("/recuriter");
+    }
+  };
+
+  useEffect(() => {
+    if (direction == 1) {
       SelectDev();
     } else {
       SelectRecruiter();
     }
-  };
+  }, []);
 
   const SelectDev = () => {
     async function getData() {
@@ -39,7 +47,6 @@ const Card = ({ title, description, direction }) => {
     };
 
     updateDev();
-    router.replace("/home");
   };
 
   const SelectRecruiter = () => {
@@ -67,7 +74,6 @@ const Card = ({ title, description, direction }) => {
     };
 
     updateRecruit();
-    router.replace("/recuriter");
   };
   return (
     <View className="flex justify-between items-center p-4 rounded-2xl bg-[#ffffff] my-5 mx-3 space-y-4">

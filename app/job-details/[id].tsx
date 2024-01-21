@@ -42,8 +42,13 @@ const JobDetails = () => {
   }, []);
 
   return (
-    <SafeAreaView className="bg-zinc-800">
-      <Stack.Screen options={{ title: "", headerShown: false }} />
+    <SafeAreaView
+      className="bg-[#120126]"
+      style={{ backgroundColor: "#120126" }}
+    >
+      <Stack.Screen
+        options={{ title: "", headerShown: false, statusBarColor: "#120126" }}
+      />
       <>
         <ScrollView
           showsVerticalScrollIndicator={false}

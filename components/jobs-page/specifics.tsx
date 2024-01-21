@@ -11,8 +11,8 @@ const Specifics = ({ title, points }) => {
             className="flex flex-row justify-start items-start"
             key={item + index}
           >
-            <View className="w-[6px] h-[6px] rounded-[6px] bg-[#C1C0C8] mt-[6px]" />
-            <Text className="text-[10px] mt-[6px] text-[#83829A] ml-[8px]">
+            <View className="w-[6px] h-[6px] rounded-[6px] bg-[#C1C0C8] mt-[10px]" />
+            <Text className="text-[14px] mt-[6px] text-[#83829A] ml-[8px]">
               {item}
             </Text>
           </View>

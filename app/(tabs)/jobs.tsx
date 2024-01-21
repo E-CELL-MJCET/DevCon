@@ -10,8 +10,14 @@ const Jobs = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
   return (
-    <SafeAreaView className="">
-      <Stack.Screen options={{ title: "Jobs", headerShown: false }} />
+    <SafeAreaView className="" style={{ backgroundColor: "#120126" }}>
+      <Stack.Screen
+        options={{
+          title: "Jobs",
+          headerShown: false,
+          statusBarColor: "#120126",
+        }}
+      />
 
       <ScrollView showsVerticalScrollIndicator={false}>
         <View className="p-3 bg-[#120126]">
