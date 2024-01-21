@@ -12,7 +12,7 @@ import {
 import { Icon } from "react-native-elements";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-const search = require("../../assets/search.png");
+const search = require("../assets/search.png");
 
 const SearchDev = () => {
   return (

@@ -8,7 +8,7 @@ const About = ({ info }) => {
       </Text>
 
       <View className="my-[8px]">
-        <Text className="text-[12px] text-[#83829A] my-[8px]">{info}</Text>
+        <Text className="text-[16px] text-[#83829A] my-[8px]">{info}</Text>
       </View>
     </View>
   );
