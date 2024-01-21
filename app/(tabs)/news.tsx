@@ -57,8 +57,14 @@ const data = [
 ];
 function News() {
   return (
-    <ScrollView>
+    <ScrollView className="bg-[#120126]">
       <View>
+        <Text
+          className="text-white px-2 py-2 mt-2 text-center font-semibold text-xl"
+          style={{ fontFamily: "Nunito_600SemiBold" }}
+        >
+          Latest Dev News
+        </Text>
         {data.map((item, i) => (
           <NewsDetails key={i} heading={item.heading} content={item.content} />
         ))}
