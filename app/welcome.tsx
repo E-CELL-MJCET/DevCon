@@ -12,6 +12,9 @@ import { supabase } from "../utils/supabase";
 import { makeRedirectUri } from "expo-auth-session";
 import * as QueryParams from "expo-auth-session/build/QueryParams";
 import * as WebBrowser from "expo-web-browser";
+import Home from "./(tabs)/home";
+import Search from "@components/jobs/search";
+import TypeSelect from "./typeSelect";
 
 const goNext = () => {
   router.replace("/stackSelector");
@@ -151,6 +154,14 @@ const Welcome = () => {
             onPress={signIn}
           >
             <Text className="text-[#ffffff]">Sign in</Text>
+          </Pressable>
+          <Pressable
+            className="border bg-primaryBg w-full py-5 rounded-3xl items-center mt-3"
+            onPress={() => {
+              router.replace("/typeSelect");
+            }}
+          >
+            <Text className="text-[#ffffff]">Direct home</Text>
           </Pressable>
         </View>
       </View>
