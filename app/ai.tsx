@@ -1,12 +1,22 @@
 import { Stack } from "expo-router";
 import React, { useEffect, useState } from "react";
-import { Pressable, SafeAreaView, Text, TextInput, View } from "react-native";
+import {
+  ActivityIndicator,
+  Pressable,
+  SafeAreaView,
+  Text,
+  TextInput,
+  View,
+} from "react-native";
 
 const AI = () => {
   const [response, setResponse] = useState("");
   const [prompt, setPrompt] = useState("");
 
+  const [isLoading, setLoading] = useState(false);
+
   const sendChatRequest = async () => {
+    setLoading(true);
     const messagesArray = [];
     const userMessage = { role: "user", content: prompt };
     const systemMessage = {
@@ -67,6 +77,7 @@ const AI = () => {
     // Add your logic to format and handle the assistant's reply
     console.log("Assistant Reply:", assistantReply);
     setResponse(assistantReply);
+    setLoading(false);
   };
 
   return (
@@ -97,10 +108,17 @@ const AI = () => {
         >
           <Text className="text-white">Ask</Text>
         </Pressable>
-        <View className="bg-violet-400 rounded-xl p-3 mt-4">
-          <Text className="text-black" style={{ fontFamily: "Nunito_700Bold" }}>
-            {response}
-          </Text>
+        <View className="bg-violet-200 rounded-xl p-3 mt-4">
+          {isLoading ? (
+            <ActivityIndicator size="large" color="#312651" />
+          ) : (
+            <Text
+              className="text-black text-[18px]"
+              style={{ fontFamily: "Nunito_700Bold" }}
+            >
+              {response}
+            </Text>
+          )}
         </View>
       </View>
     </SafeAreaView>
