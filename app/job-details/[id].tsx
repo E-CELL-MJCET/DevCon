@@ -42,7 +42,7 @@ const JobDetails = () => {
   }, []);
 
   return (
-    <SafeAreaView className="bg-[#f4f4f4]">
+    <SafeAreaView className="bg-zinc-800">
       <Stack.Screen options={{ title: "", headerShown: false }} />
       <>
         <ScrollView

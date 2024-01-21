@@ -26,13 +26,18 @@ const Home = () => {
     return null;
   }
   return (
-    <SafeAreaView className="bg-[#DBDADE] h-screen">
+    <SafeAreaView className="bg-[#120126] h-screen">
       <ScrollView className="">
         <Stack.Screen options={{ title: "Home", headerShown: true }} />
         <SearchDev />
         <AskQues />
-        <Pressable className="bg-[#eb74dd] h-14 w-15 p-4 mx-12 my-4 rounded">
-          <Text className="text-[#fffF] text-center">Submit</Text>
+        <Pressable className="bg-violet-300 text-black text-lg h-14 w-15 p-4 w-fit mx-12 my-4 rounded-lg">
+          <Text
+            className="text-black text-lg font-bold text-center"
+            style={{ fontFamily: "Nunito_700Bold" }}
+          >
+            Submit
+          </Text>
         </Pressable>
       </ScrollView>
     </SafeAreaView>
