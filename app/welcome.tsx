@@ -106,12 +106,12 @@ const Welcome = () => {
   return (
     <SafeAreaView>
       <Stack.Screen options={{ headerShown: false }}></Stack.Screen>
-      <View className="flex flex-col items-center justify-evenly h-full w-full">
+      <View className="flex flex-col items-center mt-52  space-y-6  h-full w-full">
         <View>
-          <Text className="text-primaryText">Welcome to DevCon</Text>
+          <Text className="text-2xl font-extrabold">Welcome to DevCon</Text>
         </View>
 
-        <View className="w-full px-[20px]">
+        <View className="w-full px-[20px] flex space-y-2">
           {/* <Pressable
             className="border bg-primaryBg my-3 w-full py-5 rounded-3xl items-center"
             onPress={signInWithGithub}
@@ -119,35 +119,35 @@ const Welcome = () => {
             <Text className="text-[#ffffff]">Sign in with Github</Text>
           </Pressable> */}
 
-          <View className="w-full px-3">
+          <View className="w-full px-3 flex space-y-5">
             <TextInput
               onChangeText={setUsername}
-              className="w-full px-3 h-10 border my-5"
+              className="w-full px-3 h-16 border my-1 rounded"
               placeholder="Username"
               value={username}
             ></TextInput>
             <TextInput
               onChangeText={setEmail}
-              className="w-full px-3 h-10 border my-5"
+              className="w-full px-3 h-16 border my-1 rounded"
               placeholder="Email"
               value={email}
             ></TextInput>
 
             <TextInput
               onChangeText={setPassword}
-              className="w-full px-3 h-10 border my-5"
+              className="w-full px-3 h-16 border my-1 rounded"
               placeholder="Password"
               value={password}
             ></TextInput>
             <Pressable
-              className="border bg-primaryBg w-full py-5 rounded-3xl items-center"
+              className="border bg-primaryBg w-full py-4 rounded-3xl items-center"
               onPress={signUpWithEmail}
             >
               <Text className="text-[#ffffff]">Sign up</Text>
             </Pressable>
           </View>
           <Pressable
-            className="border bg-primaryBg w-full py-5 rounded-3xl items-center mt-3"
+            className="border bg-primaryBg w-80 py-4 rounded-3xl items-center mt-3"
             onPress={signIn}
           >
             <Text className="text-[#ffffff]">Sign in</Text>
