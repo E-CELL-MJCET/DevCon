@@ -1,7 +1,8 @@
-import { Stack } from "expo-router";
+import { Stack, router } from "expo-router";
 import Card from "../components/card";
 import React from "react";
 import { SafeAreaView, View } from "react-native";
+import { supabase } from "../utils/supabase";
 
 const TypeSelect = () => {
   return (
