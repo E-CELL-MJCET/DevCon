@@ -1,14 +1,50 @@
 import React from "react";
 import { View, Text, Pressable, Image } from "react-native";
 import { Link, Stack, router } from "expo-router";
+import { supabase } from "../utils/supabase";
 
 const Card = ({ title, description, direction }) => {
   const goNext = () => {
     if (direction == 1) {
-      router.replace("/home");
+      SelectDev();
     } else {
-      router.replace("/recuriter");
+      SelectRecruiter();
     }
+  };
+
+  const SelectDev = () => {
+    const updateDev = async () => {
+      const { error } = await supabase
+        .from("users")
+        .update({
+          recruiter: false,
+        })
+        .eq("username");
+
+      if (error == null) {
+        router.replace("/home");
+      }
+
+      console.log(error);
+    };
+
+    updateDev();
+  };
+
+  const SelectRecruiter = () => {
+    const updateRecruit = async () => {
+      const { error } = await supabase.from("users").insert({
+        recruiter: false,
+      });
+
+      if (error == null) {
+        router.replace("/recuriter");
+      }
+
+      console.log(error);
+    };
+
+    updateRecruit();
   };
   return (
     <View className="flex justify-between items-center p-4 rounded-2xl bg-[#ffffff] my-5 mx-3 space-y-4">
