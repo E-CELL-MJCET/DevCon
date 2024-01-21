@@ -30,7 +30,7 @@ function settings({ name, title, description, contributions }) {
 
   return (
     <View className="bg-[#120126]">
-      <SafeAreaView className="m-4 bg-[#ffffff] rounded shadow-lg h-full flex items-center space-y-2 ">
+      <SafeAreaView className="m-4 bg-violet-200 rounded shadow-lg h-full flex items-center space-y-4  ">
         <Text
           className=" text-black text-2xl "
           style={{ fontFamily: "Nunito_700Bold" }}
@@ -42,15 +42,23 @@ function settings({ name, title, description, contributions }) {
           className="h-14 w-14 rounded"
         />
         <Text>{username}</Text>
-        <Text>{description}</Text>
-        <Text>{contributions}</Text>
+        <Text className="px-4">
+          I am a Full Stack Developer,so far I have Learned react.js and I am
+          proficient in Next.js and i also have an experience of three years.I
+          am currently Working in Delloite as a Senior Full stack Developer
+        </Text>
+        <View className="flex flex-row space-x-2 items-center">
+          <Text className="text-lg">Contributions</Text>
+          <Text>500</Text>
+        </View>
+
         <Pressable
-          className=""
+          className=" bg-violet-500 w-20 h-10 p-2 rounded-lg "
           onPress={() => {
             router.replace("/welcome");
           }}
         >
-          <Text>Submit</Text>
+          <Text className="text-center">Log Out</Text>
         </Pressable>
       </SafeAreaView>
     </View>

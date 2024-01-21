@@ -26,7 +26,7 @@ const NewsDetails = ({ heading, content, name, read }) => {
       <Text
         numberOfLines={5}
         ellipsizeMode="tail"
-        className="text-black text-sm py-2 "
+        className="text-zinc-600 text-sm py-2 "
         style={{ fontFamily: "Nunito_600SemiBold" }}
       >
         {content}
