@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { View, Text, Pressable, Image } from "react-native";
 import { Link, Stack, router } from "expo-router";
 import { supabase } from "../utils/supabase";
 
 const Card = ({ title, description, direction }) => {
+  const [userid, setUserID] = useState("");
   const goNext = () => {
     if (direction == 1) {
       SelectDev();
@@ -13,13 +14,22 @@ const Card = ({ title, description, direction }) => {
   };
 
   const SelectDev = () => {
+    async function getData() {
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
+
+      setUserID(user.id);
+    }
+    getData();
+
     const updateDev = async () => {
       const { error } = await supabase
         .from("users")
         .update({
           recruiter: false,
         })
-        .eq("username");
+        .eq("uid", userid);
 
       if (error == null) {
         router.replace("/home");
@@ -33,9 +43,12 @@ const Card = ({ title, description, direction }) => {
 
   const SelectRecruiter = () => {
     const updateRecruit = async () => {
-      const { error } = await supabase.from("users").insert({
-        recruiter: false,
-      });
+      const { error } = await supabase
+        .from("users")
+        .update({
+          recruiter: true,
+        })
+        .eq("uid", userid);
 
       if (error == null) {
         router.replace("/recuriter");

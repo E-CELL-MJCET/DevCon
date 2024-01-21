@@ -32,8 +32,7 @@ const Info = () => {
     if (error == null) {
       router.replace("/typeSelect");
     }
-
-    console.log(error);
+    global.console.log(error);
   };
 
   return (
