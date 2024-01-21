@@ -9,52 +9,52 @@ const Recuriter = () => {
   const data = [
     {
       name: "Alex Johnson",
-      techStack: ["JavaScript", "React", "Node.js"],
-      overallScore: 400,
+      techStack: ["JavaScript ", "React ", "Node.js "],
+      overallScore: 290,
     },
     {
       name: "Emily Smith",
-      techStack: ["Python", "Django", "Flask"],
-      overallScore: 400,
+      techStack: ["Python ", "Django ", "Flask "],
+      overallScore: 340,
     },
     {
       name: "Ryan Patel",
-      techStack: ["Java", "Spring", "Hibernate"],
+      techStack: ["Java ", "Spring ", "Hibernate "],
       overallScore: 440,
     },
     {
       name: "Jessica Lee",
-      techStack: ["C#", ".NET", "SQL Server"],
+      techStack: ["C# ", ".NET ", "SQL Server"],
       overallScore: 413,
     },
     {
       name: "Daniel Wang",
-      techStack: ["Ruby", "Rails", "PostgreSQL"],
+      techStack: ["Ruby ", "Rails ", "PostgreSQL"],
       overallScore: 390,
     },
     {
       name: "Ava Garcia",
-      techStack: ["Swift", "iOS", "Core Data"],
+      techStack: ["Swift ", "iOS ", "Core Data"],
       overallScore: 377,
     },
     {
       name: "Mason Kim",
-      techStack: ["PHP", "Laravel", "MySQL"],
+      techStack: ["PHP ", "Laravel ", "MySQL"],
       overallScore: 383,
     },
     {
       name: "Olivia Nguyen",
-      techStack: ["Angular", "TypeScript", "Express"],
+      techStack: ["Angular ", "TypeScript ", "Express"],
       overallScore: 427,
     },
     {
       name: "Ethan Patel",
-      techStack: ["Vue.js", "Nuxt.js", "Firebase"],
+      techStack: ["Vue.js ", "Nuxt.js ", "Firebase"],
       overallScore: 397,
     },
     {
       name: "Isabella Wang",
-      techStack: ["Go", "Gin", "MongoDB"],
+      techStack: ["Go ", "Gin ", "MongoDB"],
       overallScore: 407,
     },
   ];
@@ -63,7 +63,7 @@ const Recuriter = () => {
       <Stack.Screen options={{ title: "Recruiter", headerShown: false }} />
 
       <ScrollView>
-        <View>
+        <View className="">
           <RecruitSearch
             searchTerm={searchTerm}
             setSearchTerm={setSearchTerm}
