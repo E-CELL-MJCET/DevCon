@@ -92,15 +92,7 @@ const Home = () => {
           </Pressable>
         </View>
         <SearchDev />
-        <AskQues />
-        <Pressable className="bg-violet-600 text-black text-lg  p-4 w-fit mx-12 my-7 rounded-lg">
-          <Text
-            className="text-white text-lg font-bold text-center"
-            style={{ fontFamily: "Nunito_700Bold" }}
-          >
-            Submit
-          </Text>
-        </Pressable>
+        <AskQues id={userid} />
       </ScrollView>
     </SafeAreaView>
   );
