@@ -76,13 +76,13 @@ const Card = ({ title, description, direction }) => {
     updateRecruit();
   };
   return (
-    <View className="flex justify-between items-center p-4 rounded-2xl bg-[#ffffff] my-5 mx-3 space-y-4">
+    <View className="flex justify-between items-center p-4 rounded-2xl bg-violet-200 my-5 mx-3 space-y-4">
       <Text className="flex text-center text-lg font-semibold text-[#312651]">
         {title}
       </Text>
       <Text className="text-[#312651]">{description}</Text>
       <Pressable
-        className="p-4 mx-2 rounded-full bg-[#191f91] w-full"
+        className="p-4 mx-2 rounded-full bg-violet-600  w-full"
         onPress={goNext}
       >
         <Text className="text-center text-[#ffffff]">Next</Text>

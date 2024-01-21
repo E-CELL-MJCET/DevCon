@@ -10,6 +10,7 @@ import {
   Nunito_500Medium,
   Nunito_600SemiBold,
   Nunito_700Bold,
+  Nunito_800ExtraBold,
 } from "@expo-google-fonts/nunito";
 import AskQues from "../askQues";
 import { supabase } from "../../utils/supabase";
@@ -23,6 +24,7 @@ const Home = () => {
     Nunito_500Medium,
     Nunito_600SemiBold,
     Nunito_700Bold,
+    Nunito_800ExtraBold,
   });
 
   if (!fontsLoaded) {

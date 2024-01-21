@@ -1,3 +1,4 @@
+import { Stack } from "expo-router";
 import React, { useEffect, useState } from "react";
 import { Pressable, SafeAreaView, Text, TextInput, View } from "react-native";
 
@@ -67,21 +68,40 @@ const AI = () => {
     console.log("Assistant Reply:", assistantReply);
     setResponse(assistantReply);
   };
+
   return (
-    <SafeAreaView>
-      <View className="px-5 my-3 ">
+    <SafeAreaView className="h-screen" style={{ backgroundColor: "#120126" }}>
+      <Stack.Screen
+        options={{
+          title: "AI",
+          headerShown: false,
+          statusBarColor: "#120126",
+        }}
+      />
+      <View className="px-5 mt-10">
+        <Text
+          className="text-white my-4 text-[20px]"
+          style={{ fontFamily: "Nunito_700Bold" }}
+        >
+          Ask AI
+        </Text>
         <TextInput
-          className="h-10 border p-3 rounded-xl"
+          className="h-10 border border-white text-white  p-3 rounded-xl"
           placeholder="Enter your question"
           onChangeText={setPrompt}
+          placeholderTextColor="#ffffff"
         ></TextInput>
         <Pressable
-          className="w-full h-10 p-3 rounded-xl items-center justify-center bg-primaryBg mt-4"
+          className="w-full h-10 p-3 rounded-xl items-center justify-center bg-violet-700 mt-4"
           onPress={sendChatRequest}
         >
           <Text className="text-white">Ask</Text>
         </Pressable>
-        <Text className="mt-5">{response}</Text>
+        <View className="bg-violet-400 rounded-xl p-3 mt-4">
+          <Text className="text-black" style={{ fontFamily: "Nunito_700Bold" }}>
+            {response}
+          </Text>
+        </View>
       </View>
     </SafeAreaView>
   );
