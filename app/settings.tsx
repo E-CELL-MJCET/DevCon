@@ -29,10 +29,18 @@ function settings({ name, title, description, contributions }) {
   getData();
 
   return (
-    <View>
+    <View className="bg-[#120126]">
       <SafeAreaView className="m-4 bg-[#ffffff] rounded shadow-lg h-full flex items-center space-y-2 ">
-        <Text className="">Developer</Text>
-        <Icon name="settings" size={30} color="#900" />
+        <Text
+          className=" text-black text-2xl "
+          style={{ fontFamily: "Nunito_700Bold" }}
+        >
+          Developer
+        </Text>
+        <Image
+          source={require("../assets/user.png")}
+          className="h-14 w-14 rounded"
+        />
         <Text>{username}</Text>
         <Text>{description}</Text>
         <Text>{contributions}</Text>
@@ -43,15 +51,6 @@ function settings({ name, title, description, contributions }) {
           }}
         >
           <Text>Submit</Text>
-        </Pressable>
-
-        <Pressable
-          className=""
-          onPress={() => {
-            router.replace("/ai");
-          }}
-        >
-          <Text>AI</Text>
         </Pressable>
       </SafeAreaView>
     </View>
