@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, Pressable } from "react-native";
 import { Image } from "react-native-elements";
 
-const NewsDetails = ({ heading, content }) => {
+const NewsDetails = ({ heading, content, name, read }) => {
   return (
     <View className="bg-violet-300 rounded-2xl p-6 shadow-lg m-2 ">
       <Text
@@ -18,9 +18,9 @@ const NewsDetails = ({ heading, content }) => {
             className="text-black text-sm"
             style={{ fontFamily: "Nunito_600SemiBold" }}
           >
-            John
+            {name}
           </Text>
-          <Text className="text-black text-xs">Read by 10</Text>
+          <Text className="text-black text-xs">{read} mins read</Text>
         </View>
       </View>
       <Text
