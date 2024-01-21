@@ -143,9 +143,15 @@ const Welcome = () => {
               className="border bg-primaryBg w-full py-5 rounded-3xl items-center"
               onPress={signUpWithEmail}
             >
-              <Text className="text-[#ffffff]">Get Started</Text>
+              <Text className="text-[#ffffff]">Sign up</Text>
             </Pressable>
           </View>
+          <Pressable
+            className="border bg-primaryBg w-full py-5 rounded-3xl items-center mt-3"
+            onPress={signIn}
+          >
+            <Text className="text-[#ffffff]">Sign in</Text>
+          </Pressable>
         </View>
       </View>
     </SafeAreaView>
